@@ -15,4 +15,4 @@ Bienvenue sur mon dépôt de projets **Dart**. Ce dossier regroupe mes exercices
 ### Gestionnaire de Tâches
 Un outil en ligne de commande pour organiser ses tâches quotidiennes.
 - **Points techniques** : Filtrage par priorité, tri chronologique par `DateTime`, recherche robuste.
-- **Fichier** : `Gestionnaire_de_tâches/`
+- **Dossier** : [](Gestionnaire_de_tâches)
