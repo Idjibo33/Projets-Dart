@@ -16,3 +16,12 @@ Bienvenue sur mon dépôt de projets **Dart**. Ce dossier regroupe mes exercices
 Un outil en ligne de commande pour organiser ses tâches quotidiennes.
 - **Points techniques** : Filtrage par priorité, tri chronologique par `DateTime`, recherche robuste.
 - **Dossier** : [lien](Gestionnaire_de_tâches)
+
+
+### Système de Réservation de Siège de salle de cinéma
+Un outil en ligne de commande pour gérer les sièges d'une salle de cinéma.
+- **Points techniques** : Réservation,Affichage de sièges libres et occupés, Gestion d'erreurs. 
+- **Dossier** : [lien](Gestionnaire_de_siege_SalleDeCinema)
+
+
+
