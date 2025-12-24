@@ -24,4 +24,10 @@ Un outil en ligne de commande pour gérer les sièges d'une salle de cinéma.
 - **Dossier** : [lien](Gestionnaire_de_siege_SalleDeCinema)
 
 
+### Système de gestion d'une bibliothèque 
+Un outil en ligne de commande pour gérer les emprunts des ouvrages d'une bibliothèque par des adhérants.
+- **Points techniques** : Gestion du catalogue ,Historique personnel, Sécurité par Exceptions. 
+- **Dossier** : [lien](Gestionnaire_de_bibliothèque)
+
+
 
