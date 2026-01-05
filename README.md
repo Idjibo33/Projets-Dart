@@ -30,4 +30,12 @@ Un outil en ligne de commande pour gérer les emprunts des ouvrages d'une biblio
 - **Dossier** : [lien](Gestionnaire_de_bibliothèque)
 
 
+### Système de gestion d'un portefeuille
+Un gestionnaire de portefeuille numérique en ligne de commande développé avec Dart. Ce projet simule les opérations bancaires essentielles tout en garantissant l'intégrité des données financières.
+- **points techniques:** gestion de solde sécurisée, Dépôts et retraits, Filtrage.
+- **Dossier** : [lien](MonPortefeuille)
+
+
+
+
 
