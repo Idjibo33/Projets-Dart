@@ -1,12 +1,16 @@
 //Créer la classe Transaction
 
+import 'dart:math';
+
 class Transaction {
+  String id;
   double montant;
   String? description;
   DateTime date;
   bool estcredit;
 
   Transaction({
+    required this.id,
     required this.montant,
     this.description,
     required this.date,
@@ -26,7 +30,12 @@ class Portefeuille {
   void depot(double montant) {
     _solde += montant;
     historique.add(
-      Transaction(montant: montant, date: DateTime.now(), estcredit: true),
+      Transaction(
+        id: Securite().genererId(),
+        montant: montant,
+        date: DateTime.now(),
+        estcredit: true,
+      ),
     );
     print("$montant ajouté au portefeuille");
   }
@@ -37,6 +46,7 @@ class Portefeuille {
       _solde -= montant;
       historique.add(
         Transaction(
+          id: Securite().genererId(),
           montant: montant,
           description: description,
           date: DateTime.now(),
@@ -57,7 +67,7 @@ class Portefeuille {
       for (var t in historique) {
         final transaction = t;
         print(
-          "${transaction.montant}, ${transaction.estcredit ? "Dépôt" : "Retrait"}, ${transaction.date}",
+          "Id: ${transaction.id}, Montant: ${transaction.montant}, Type: ${transaction.estcredit ? "Dépôt" : "Retrait"}, Date: ${transaction.date}",
         );
       }
     }
@@ -66,14 +76,26 @@ class Portefeuille {
   // Afficher les dépôts
   void afficherDepot() {
     for (var t in historique.where((element) => element.estcredit == true)) {
-      print("${t.montant}, ${t.date}");
+      print("Id: ${t.id} ,Montant: ${t.montant}, Date: ${t.date}");
     }
   }
 
-  // Afficher les dépôts
+  // Afficher les retraits
   void afficherRetrait() {
     for (var t in historique.where((element) => element.estcredit == false)) {
-      print("${t.montant}, ${t.date}");
+      print("Id: ${t.id},Montant: ${t.montant}, Date: ${t.date}");
     }
+  }
+}
+
+//La classe Securite
+class Securite {
+  //Générer un Id
+  String genererId({int longueur = 1}) {
+    var alea = Random();
+    var unite = Iterable.generate(longueur, (index) {
+      return alea.nextInt(999) + 100;
+    });
+    return unite.toString();
   }
 }

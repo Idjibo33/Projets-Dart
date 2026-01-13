@@ -5,9 +5,11 @@ Un gestionnaire de portefeuille numérique en ligne de commande développé avec
 - **Gestion de solde sécurisée:** Encapsulation du solde pour éviter les modifications frauduleuses
 - **Dépôts et retraits:** Système de transactions avec vérification automatique des fonds disponibles 
 - **Filtrage:** Affichage des flux (Dépôts uniquement ou retraits uniquement)
+- **Generation de id:** Fonctionnalité de génération d'identifiant pour une transaction
 
 ## Concepts Dart utilisés
 - **Encapsulations et Poo :** Utilisation de variables privées (_solde) et de getter pour protéger l'état de l'objet
 - **Gestion des collections:** Manipulation de listes d'objets pour structurer l'historique
 - **Programmation Fonctionnelle:** 
   - .Where(): pour le filtrage des transactions selon leur type
+  - Random() et nextInt()" pour la génération d'id
