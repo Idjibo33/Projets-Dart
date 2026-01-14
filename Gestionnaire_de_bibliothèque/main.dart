@@ -1,62 +1,33 @@
 import 'classes.dart';
 
 void main() {
-  //Ajout d'un livre de la bibliothèque
-  var livre1 = Livre("L'enfant noir", "Camara Laye");
+  var monBibliotheque = Bibliotheque();
 
-  //Ajout de deux adhérents
-  var mohamed = Adherent("Mohamed", []);
-  var sani = Adherent("Sani", []);
-
-  //Mohamed emprunte le livre "L'enfant noir"
-  try {
-    mohamed.emprunterLivre(livre1);
-  } catch (e) {
-    print(e);
-  }
-
-  //sani essaie d'emprunter le même livre "L'enfant noir"
-  try {
-    sani.emprunterLivre(livre1);
-  } catch (e) {
-    print(e);
-  }
-
-  //Ajout d'un autre adhérent
-  var ismael = Adherent("Ismael", []);
-
+  //Création de mon catalogue
   //Ajout de trois autres livres à la bibiliothèque
-  var livre2 = Livre("Sarraounia", "Abdoulaye Mamani");
-  var livre3 = Livre("Contes du Niger", "Boubou Hama");
-  var livre4 = Livre("Les bouts de bois de Dieu", "Ousmane Sembène");
+  var l1 = Livre("Sarraounia", "Abdoulaye Mamani", false);
+  var l2 = Livre("Contes du Niger", "Boubou Hama", false);
+  var l3 = Livre("Les bouts de bois de Dieu", "Ousmane Sembène", false);
+  monBibliotheque.ajouterLivre(l1);
+  monBibliotheque.ajouterLivre(l2);
+  monBibliotheque.ajouterLivre(l3);
 
-  //L'adhérent "ismael" emprunte les livres1,2,3
-  ismael.emprunterLivre(livre2);
-  ismael.emprunterLivre(livre3);
-  ismael.emprunterLivre(livre4);
+  // Ajouter membres
+  var m1 = Adherent("Ismael", []);
+  var m2 = Adherent("Djibo", []);
+  var m3 = Adherent("Adamou", []);
+  monBibliotheque.membres.add(m1);
+  print("Le membre ${m1.nom} a été ajouté avec succès");
+  monBibliotheque.membres.add(m2);
+  print("Le membre ${m2.nom} a été ajouté avec succès");
+  monBibliotheque.membres.add(m3);
+  print("Le membre ${m3.nom} a été ajouté avec succès");
 
-  //Le nombre de livre que l'adhérent "Ismael" a emprunté
-  print(
-    "le nombre de livres emprunté par l'adhérent Ismael = ${ismael.livresEmpruntes.length}",
-  );
-
-  //Ajout d'un autre adhérent
-  var adamou = Adherent("Adamou", []);
-
-  //Ajout d'un livre à la biblithèque
-  var livre5 = Livre("Sous l'orage", "Seydou Badian");
-
-  //L'adhérent "Adamou" emprunte le livre "Sous l'orage" une première fois
   try {
-    adamou.emprunterLivre(livre5);
-  } catch (e) {
-    print(e);
-  }
-  ;
-
-  //L'adhérent "Adamou" emprunte le livre "Sous l'orage" une deuxième fois
-  try {
-    adamou.emprunterLivre(livre5);
+    m1.emprunterLivre(l1);
+    m1.emprunterLivre(l2);
+    m1.emprunterLivre(l3);
+    monBibliotheque.genererRapport();
   } catch (e) {
     print(e);
   }
